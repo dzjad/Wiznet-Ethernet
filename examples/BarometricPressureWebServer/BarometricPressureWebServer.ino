@@ -65,7 +65,7 @@ void setup() {
   //Ethernet.init(20);  // Teensy++ 2.0
   //Ethernet.init(15);  // ESP8266 with Adafruit Featherwing Ethernet
   //Ethernet.init(33);  // ESP32 with Adafruit Featherwing Ethernet
-  //Ethernet.init(17);  // WIZnet W5100S-EVB-Pico
+  //Ethernet.init(17);  // WIZnet W5100S-EVB-Pico W5500-EVB-Pico
 
   // start the SPI library:
   SPI.begin();
@@ -229,7 +229,8 @@ unsigned int readRegister(byte registerName, int numBytes) {
   // take the chip select low to select the device:
   digitalWrite(chipSelectPin, LOW);
   // send the device the register you want to read:
-  int command = SPI.transfer(registerName);
+  //int command = SPI.transfer(registerName);
+  SPI.transfer(registerName);
   // send a value of 0 to read the first byte returned:
   inByte = SPI.transfer(0x00);
 
