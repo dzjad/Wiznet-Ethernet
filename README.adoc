@@ -1,3 +1,6 @@
+Fork: There's a bug in the manual / static IP address assignment code; fix here: https://github.com/dzjad/Wiznet-Ethernet/commit/e9e172f01e89ea80f87fba0f858acef896845e8a
+
+
 = Ethernet Library for Arduino =
 
 With the Arduino Ethernet Shield, this library allows an Arduino board to connect to the internet.
